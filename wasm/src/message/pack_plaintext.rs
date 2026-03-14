@@ -21,7 +21,7 @@ impl Message {
 
 #[wasm_bindgen(typescript_custom_section)]
 const MESSAGE_PACK_PLAYNTEXT_TS: &'static str = r#"
-interface Message {
+export interface Message {
     /**
      * Produces `DIDComm Plaintext Messages`
      * https://identity.foundation/didcomm-messaging/spec/#didcomm-plaintext-messages.

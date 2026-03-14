@@ -100,7 +100,7 @@ const PACK_UNPACK_OPTIONS_TS: &'static str = r#"
 /**
  *  Allows fine customization of unpacking process
  */
-type UnpackOptions = {
+export type UnpackOptions = {
     /**
      * Whether the plaintext must be decryptable by all keys resolved by the secrets resolver.
      * False by default.
@@ -123,7 +123,7 @@ const UNPACK_METADATA_TS: &'static str = r#"
  * Additional metadata about this `unpack` method execution like trust predicates
  * and used keys identifiers.
  */
-type UnpackMetadata = {
+export type UnpackMetadata = {
     /**
      * Whether the plaintext has been encrypted.
      */

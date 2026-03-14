@@ -20,7 +20,7 @@ const DID_RESOLVER_TS: &'static str = r#"
 /**
  * Represents DID Doc resolver (https://www.w3.org/TR/did-core/#did-resolution).
  */
-interface DIDResolver {
+export interface DIDResolver {
     /**
      * Resolves a DID document by the given DID.
      *

@@ -30,7 +30,7 @@ const SECRET_RESOLVER_TS: &'static str = r#"
  * Interface for secrets resolver.
  * Resolves secrets such as private keys to be used for signing and encryption.
  */
-interface SecretsResolver {
+export interface SecretsResolver {
     /**
      * Finds secret (usually private key) identified by the given key ID.
      *

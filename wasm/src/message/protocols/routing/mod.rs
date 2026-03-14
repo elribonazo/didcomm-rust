@@ -88,7 +88,7 @@ impl Message {
 
 #[wasm_bindgen(typescript_custom_section)]
 const PARSED_FORWARD_AS_VALUE_TS: &'static str = r#"
-interface ParsedForward {
+export interface ParsedForward {
     as_value(): IParsedForward;
 }
 "#;
@@ -101,7 +101,7 @@ extern "C" {
 
 #[wasm_bindgen(typescript_custom_section)]
 const IPARSED_FORWARD_TS: &'static str = r#"
-type IParsedForward = {
+export type IParsedForward = {
     msg: Message,
     next: string,
     forwarded_msg: any
@@ -144,7 +144,7 @@ export namespace Message {
 
 #[wasm_bindgen(typescript_custom_section)]
 const MESSAGE_TRY_PARSE_FORWARD_TS: &'static str = r#"
-interface Message {
+export interface Message {
     /**
      * Tries to parse the Message to a Forward message
      * 

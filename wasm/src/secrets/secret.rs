@@ -5,7 +5,7 @@ const SECRET_TS: &'static str = r#"
 /**
  * Represents secret.
  */
-type Secret = {
+export type Secret = {
     /**
      * A key ID identifying a secret (private key).
      */
@@ -30,7 +30,7 @@ const SECRET_TYPE_TS: &'static str = r#"
 /**
  * Must have the same semantics as type ('type' field) of the corresponding method in DID Doc containing a public key.
  */
-type SecretType =
+export type SecretType =
     "JsonWebKey2020" | "X25519KeyAgreementKey2019" 
     | "Ed25519VerificationKey2018" | "EcdsaSecp256k1VerificationKey2019" | string
 "#;

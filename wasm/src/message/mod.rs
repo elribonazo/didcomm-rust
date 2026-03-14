@@ -44,7 +44,7 @@ impl Message {
 
 #[wasm_bindgen(typescript_custom_section)]
 const MESSAGE_AS_VALUE_TS: &'static str = r#"
-interface Message {
+export interface Message {
     /**
      * @returns message representation as plain object
      */
@@ -60,7 +60,7 @@ extern "C" {
 
 #[wasm_bindgen(typescript_custom_section)]
 const IMESSAGE_TS: &'static str = r#"
-type IMessage = {
+export type IMessage = {
     /**
      * Message id. Must be unique to the sender.
      */
@@ -144,7 +144,7 @@ type IMessage = {
 
 #[wasm_bindgen(typescript_custom_section)]
 const ATTACHMENT_TS: &'static str = r#"
-type Attachment = {
+export type Attachment = {
     /**
      * A JSON object that gives access to the actual content of the attachment.
      * Can be based on base64, json or external links.
@@ -200,12 +200,12 @@ type Attachment = {
 
 #[wasm_bindgen(typescript_custom_section)]
 const ATTACHMENT_DATA_TS: &'static str = r#"
-type AttachmentData = Base64AttachmentData | JsonAttachmentData | LinksAttachmentData
+export type AttachmentData = Base64AttachmentData | JsonAttachmentData | LinksAttachmentData
 "#;
 
 #[wasm_bindgen(typescript_custom_section)]
 const BASE64_ATTACHMENT_DATA_TS: &'static str = r#"
-type Base64AttachmentData = {
+export type Base64AttachmentData = {
     /**
      * Base64-encoded data, when representing arbitrary content inline.
      */
@@ -220,7 +220,7 @@ type Base64AttachmentData = {
 
 #[wasm_bindgen(typescript_custom_section)]
 const JSON_ATTACHMENT_DATA_TS: &'static str = r#"
-type JsonAttachmentData = {
+export type JsonAttachmentData = {
     /**
      * Directly embedded JSON data.
      */
@@ -235,7 +235,7 @@ type JsonAttachmentData = {
 
 #[wasm_bindgen(typescript_custom_section)]
 const LINKS_ATTACHMENT_DATA_TS: &'static str = r#"
-type LinksAttachmentData = {
+export type LinksAttachmentData = {
     /**
      * A list of one or more locations at which the content may be fetched.
      */

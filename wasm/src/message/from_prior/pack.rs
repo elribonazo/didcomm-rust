@@ -39,7 +39,7 @@ impl FromPrior {
 
 #[wasm_bindgen(typescript_custom_section)]
 const FROM_PRIOR_PACK_TS: &'static str = r#"
-interface FromPrior {
+export interface FromPrior {
     /**
      * Packs a plaintext `from_prior` value into a signed JWT.
      * https://identity.foundation/didcomm-messaging/spec/#did-rotation

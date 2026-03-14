@@ -47,7 +47,7 @@ impl Message {
 
 #[wasm_bindgen(typescript_custom_section)]
 const MESSAGE_PACK_ENCRYPTED_TS: &'static str = r#"
-interface Message {
+export interface Message {
     /** 
      * Produces `DIDComm Signed Message`
      * https://identity.foundation/didcomm-messaging/spec/#didcomm-signed-message.
@@ -90,7 +90,7 @@ const PACK_SIGNED_METADATA_TS: &'static str = r#"
 /**
  * Additional metadata about this `pack` method execution like used key identifiers.
  */
-type PackSignedMetadata = {
+export type PackSignedMetadata = {
     /**
      * Identifier (DID URL) of sign key.
      */

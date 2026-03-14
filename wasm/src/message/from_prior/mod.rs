@@ -41,7 +41,7 @@ impl FromPrior {
 
 #[wasm_bindgen(typescript_custom_section)]
 const MESSAGE_AS_VALUE_TS: &'static str = r#"
-interface FromPrior {
+export interface FromPrior {
     /**
      * @returns FromPrior representation as plain object
      */
@@ -57,7 +57,7 @@ extern "C" {
 
 #[wasm_bindgen(typescript_custom_section)]
 const IMESSAGE_TS: &'static str = r#"
-type IFromPrior = {
+export type IFromPrior = {
     /**
      * new DID after rotation
      */

@@ -5,7 +5,7 @@ const DID_DOC_TS: &'static str = r#"
 /**
  * Represents DID Document (https://www.w3.org/TR/did-core/)
  */
-type DIDDoc = {
+export type DIDDoc = {
     /**
      * DID for the given DID Doc
      */
@@ -43,7 +43,7 @@ const VERIFICATION_METHOD_TS: &'static str = r#"
  * Represents verification method record in DID Document
  * (https://www.w3.org/TR/did-core/#verification-methods).
  */
-type VerificationMethod = {
+export type VerificationMethod = {
     id: string,
     type: VerificationMethodType,
     controller: string,
@@ -55,7 +55,7 @@ type VerificationMethod = {
 
 #[wasm_bindgen(typescript_custom_section)]
 const VERIFICATION_METHOD_TYPE_TS: &'static str = r#"
-type VerificationMethodType = "JsonWebKey2020" | "X25519KeyAgreementKey2019" 
+export type VerificationMethodType = "JsonWebKey2020" | "X25519KeyAgreementKey2019" 
     | "Ed25519VerificationKey2018" | "EcdsaSecp256k1VerificationKey2019" | string
 "#;
 
@@ -64,7 +64,7 @@ const SERVICE_TS: &'static str = r#"
 /**
  * Represents service record in DID Document (https://www.w3.org/TR/did-core/#services).
  */
-type Service = {
+export type Service = {
     id: string,
     type: string,
     serviceEndpoint: ServiceKind,
@@ -76,7 +76,7 @@ const SERVICE_KIND_TS: &'static str = r#"
 /**
  * Represents additional service properties defined for specific Service type.
  */
-type ServiceKind = DIDCommMessagingService | any
+export type ServiceKind = DIDCommMessagingService | any
 "#;
 
 #[wasm_bindgen(typescript_custom_section)]
@@ -85,7 +85,7 @@ const DIDCOMM_MESSAGING_SERVICE_TS: &'static str = r#"
  * Properties for DIDCommMessagingService
  * (https://identity.foundation/didcomm-messaging/spec/#did-document-service-endpoint).
  */
-type DIDCommMessagingService = {
+export type DIDCommMessagingService = {
     uri: string,
     accept?: Array<string>,
     routing_keys: Array<string>,

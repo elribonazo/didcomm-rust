@@ -65,7 +65,7 @@ impl Message {
 
 #[wasm_bindgen(typescript_custom_section)]
 const MESSAGE_PACK_ENCRYPTED_TS: &'static str = r#"
-interface Message {
+export interface Message {
     /**
      * Produces `DIDComm Encrypted Message`
      * https://identity.foundation/didcomm-messaging/spec/#didcomm-encrypted-message.
@@ -134,7 +134,7 @@ const PACK_ENCRYPTED_OPTIONS_TS: &'static str = r#"
 /**
  *  Allow fine configuration of packing process.
  */
-type PackEncryptedOptions = {
+export type PackEncryptedOptions = {
     /**
      * If `true` and message is authenticated than information about sender will be protected from mediators, but
      * additional re-encryption will be required. For anonymous messages this property will be ignored.
@@ -182,7 +182,7 @@ const PACK_ENCRYPTED_METADATA_TS: &'static str = r#"
  * Additional metadata about this `encrypt` method execution like used keys identifiers,
  * used messaging service.
  */
-type PackEncryptedMetadata = {
+export type PackEncryptedMetadata = {
     /**
      * Information about messaging service used for message preparation.
      * Practically `service_endpoint` field can be used to transport the message.
@@ -212,7 +212,7 @@ const MESSAGING_SERVICE_METADATA_TS: &'static str = r#"
  * Information about messaging service used for message preparation.
  * Practically `service_endpoint` field can be used to transport the message.
  */
-type MessagingServiceMetadata = {
+export type MessagingServiceMetadata = {
     /**
      * Identifier (DID URL) of used messaging service.
      */
